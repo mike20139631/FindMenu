@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#EA2027</color>
+    <color name="blue">#1B1464</color>
+    <color name="green">#009432</color>
+    <color name="yellow">#FFC312</color>
+    <color name="purple">#6F1E51</color>
+    <color name="turkeyBlue">#00c78c</color>
+    <color name="turkeyBlue_2">#006699</color>
+    <color name="turkeyBlue_3">#33E6CC</color>
+    <color name="turkeyBlue_4">#339FAE</color>
+    <color name="main_blue">#1e90ff</color>
+
+    <color name="a_01">#1A7D60</color>
+    <color name="a_02">#333333</color>
+    <color name="a_03">#3c3c3c</color>
+    <color name="a_04">#cccccc</color>
+    <color name="a_05">#a5b1c2</color>
+
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_01">#C2EDFF</color>
+    <color name="color_02">#5881F5</color>
+    <color name="color_03">#863EFF</color>
+    <color name="color_04">#331FF0</color>
+    <color name="color_05">#100F37</color>
+
+    <color name="color_11">#EB5756</color>
+    <color name="color_12">#CADED8</color>
+    <color name="color_13">#72E2B4</color>
+    <color name="color_14">#EDB200</color>
+    <color name="color_15">#006B3E</color>
+
+    //扁平色系-china
+    <color name="color_21">#eccc68</color>
+    <color name="color_22">#ff7f50</color>
+    <color name="color_23">#ff6b81</color>
+    <color name="color_24">#a4b0be</color>
+    <color name="color_25">#57606f</color>
+    <color name="color_26">#ffa502</color>
+    <color name="color_27">#ff6348</color>
+    <color name="color_28">#ff4757</color>
+    <color name="color_29">#747d8c</color>
+    <color name="color_210">#2f3542</color>
+    <color name="color_211">#7bed9f</color>
+    <color name="color_212">#70a1ff</color>
+    <color name="color_213">#5352ed</color>
+    <color name="color_214">#ffffff</color>
+    <color name="color_215">#dfe4ea</color>
+    <color name="color_216">#2ed573</color>
+    <color name="color_217">#1e90ff</color>
+    <color name="color_218">#3742fa</color>
+    <color name="color_219">#f1f2f6</color>
+    <color name="color_220">#ced6e0</color>
+
+
+
+</resources>

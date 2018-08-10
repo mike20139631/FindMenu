@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">findmenu</string>
+    <string name="ads_id">ca-app-pub-6617698412513219~9152085033</string>
+    <string name="ads_adUnitId_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ads_adUnitId">ca-app-pub-6617698412513219/6588682638</string>
+
+    <string name="app_name_ch">找菜單</string>
+    <string name="home">首頁</string>
+    <string name="favorite">最愛</string>
+    <string name="user">會員</string>
+    <string name="more">更多</string>
+
+    <string name="find_food">找吃的</string>
+    <string name="find_drink">找喝的</string>
+    <string name="find_any">找不到</string>
+    <string name="find_location">找定位</string>
+
+
+    <string name="phone_call">打電話：</string>
+    <string name="go_map">看地圖：</string>
+    <string name="res_name">餐廳：</string>
+
+</resources>
