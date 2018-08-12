@@ -15,9 +15,13 @@
     <string name="find_any">找不到</string>
     <string name="find_location">找定位</string>
 
-
     <string name="phone_call">打電話：</string>
     <string name="go_map">看地圖：</string>
     <string name="res_name">餐廳：</string>
+
+    <string name="food_list">美食列表</string>
+    <string name="dessert_list">甜點列表</string>
+    <string name="drink_list">飲品列表</string>
+    <string name="res_info">店家資訊</string>
 
 </resources>

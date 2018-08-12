@@ -23,6 +23,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.PropertyName;
 import com.google.firebase.database.ValueEventListener;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout ll_list;
     private TextView tv_01;
 
-
+    //todo 回到main page 要將上面的task清除
+    //todo
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +96,28 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG,"is test device: "+request.isTestDevice(this));
     }
 
+    private String tag_version;
+    private String tag_updatetime;
+    private String res_version;
+    private String res_updatetime;
+    private void getVersion(){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference();
+        // Read from the database
+        myRef.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                dataSnapshot.child("res_version").getValue();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+    }
     private void getTag(){
         hashMap_tags.clear();
         // Write a message to the database
@@ -203,7 +232,77 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void saveRestaurant(){
+        //第一次抓到資料,存到file裡面,global list都從file讀取
+        //之後就判斷version是否需要更新(更新到file),global list都從file讀取
 
+        //File file = new File(context.getFilesDir(), filename);
+
+        //make json
+        try{
+            JSONObject json_root = new JSONObject();
+
+            //restaurant
+            JSONObject json_res = new JSONObject();
+            JSONArray json_res_arr = new JSONArray();//JSON陣列
+            JSONObject json_res_arr_obj = new JSONObject();//JSON陣列內的object
+            for(int i=0;i<3;i++){
+                json_res_arr_obj.put("uid",i);
+                json_res_arr_obj.put("name",i);
+                json_res_arr_obj.put("url",i);
+                json_res_arr_obj.put("menu",i);
+                json_res_arr_obj.put("tag",i);
+                json_res_arr_obj.put("star",i);
+                json_res_arr_obj.put("sTotalClick",i);
+                json_res_arr_obj.put("updatetime",i);
+                //後面3個只存本機
+                json_res_arr_obj.put("favorite",i);
+                json_res_arr_obj.put("clickCount",i);
+                json_res_arr_obj.put("cTotalClick",i);
+
+                json_res_arr.put(json_res_arr_obj);
+            }
+
+            //tag
+            JSONObject json_tag = new JSONObject();
+            JSONArray json_tag_arr = new JSONArray();//JSON陣列
+            JSONObject json_tag_arr_obj = new JSONObject();
+            for(int i=0;i<3;i++){
+                json_tag_arr_obj.put(String.valueOf(i),"吃的");
+                json_tag_arr.put(json_tag_arr_obj);
+            }
+
+            //將JSON物件存好內容
+            json_root.put("restaurant",json_res_arr);
+            json_root.put("tag",json_tag_arr);
+            json_root.put("res_version","1.0.0");
+            json_root.put("res_update_time","201808121259");
+            json_root.put("tag_version","1.0.0");
+            json_root.put("tag_update_time","201808121259");
+
+            //最後json_obj內容印出(當JSON+"\n"就可成為String印出,在傳輸時也必須用JSON+"\n")
+            Log.i("text", "json_root="+json_root+"\n");
+        }catch (JSONException ex){
+            ex.printStackTrace();
+        }
+
+
+
+
+
+        //存檔
+        String filename = "myfile";
+        String fileContents = "Hello world!";
+        FileOutputStream outputStream;
+
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+            outputStream.write(fileContents.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
 

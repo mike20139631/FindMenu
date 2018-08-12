@@ -2,6 +2,7 @@ package work.mikehuang.findmenu;
 
 import android.content.Context;
 import android.content.Intent;
+import android.telephony.PhoneNumberUtils;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -45,5 +46,23 @@ public class Utils {
         }
         mAdView.loadAd(adRequest);
         //Log.d(TAG,"is test device: "+adRequest.isTestDevice(this));
+    }
+
+    public static String getBackName(int index){
+        switch (index){
+            default:
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                return String.valueOf(R.string.go_map);
+        }
+    }
+
+    public static boolean validCellPhone(String number)
+    {
+        return PhoneNumberUtils.isGlobalPhoneNumber("+912012185234");
+        //return android.util.Patterns.PHONE.matcher(number).matches();
     }
 }

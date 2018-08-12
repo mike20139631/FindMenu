@@ -25,21 +25,28 @@
                     android:id="@+id/btn_back"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="15dp"
                     android:src="@drawable/icon_back"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center">
                 <TextView
-                    android:id="@+id/tv_back"
+                    android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@string/font_family_light"
-                    android:text="返回(ex:店家列表 or ...)"
-                    android:layout_marginStart="15dp"
+                    android:text="@string/res_info"
                     android:textColor="@color/white"
                     android:textSize="22sp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:layout_alignParentEnd="true"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
@@ -90,7 +97,7 @@
                         <WebView
                             android:id="@+id/wv_test"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"/>
+                            android:layout_height="300dp"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="10dp"
@@ -109,26 +116,32 @@
                                 android:paddingStart="10dp"
                                 android:layout_marginBottom="2dp">
                                 <ImageView
+                                    android:id="@+id/iv_star_01"
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
                                     android:src="@drawable/icon_star_red_full"/>
                                 <ImageView
+                                    android:id="@+id/iv_star_02"
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
                                     android:src="@drawable/icon_star_red_full"/>
                                 <ImageView
+                                    android:id="@+id/iv_star_03"
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
                                     android:src="@drawable/icon_star_red_full"/>
                                 <ImageView
+                                    android:id="@+id/iv_star_04"
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
                                     android:src="@drawable/icon_star_red_full"/>
                                 <ImageView
+                                    android:id="@+id/iv_star_05"
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
                                     android:src="@drawable/icon_star_red_full"/>
                                 <ImageView
+                                    android:id="@+id/iv_star_06"
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
                                     android:src="@drawable/icon_star_red_full"/>
